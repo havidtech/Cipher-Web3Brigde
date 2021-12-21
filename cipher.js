@@ -7,6 +7,8 @@ function encode(secret, plainText){
         newUnicodeDecimal = originalUnicodeDecimal * secret;
         encodedText += String.fromCharCode(newUnicodeDecimal)
     }
+    
+    return encodedText;
 }
 
 function decode(secret, encodedText){
@@ -16,4 +18,6 @@ function decode(secret, encodedText){
         originalUnicodeDecimal = encodedText.charCodeAt(i) / secret;
         decodedText += String.fromCharCode(originalUnicodeDecimal)
     }
+    
+    return decodedText;
 }
